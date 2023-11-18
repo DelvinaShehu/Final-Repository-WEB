@@ -3,66 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Optika</title>
+
+  <title>ClearVue</title>
+
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins",sans-serif;  
+    }
+
+    body{
+      min-height: 100vh;
+      background: url(backroundimg.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
     .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 100px;
+      background-color: transparent;
       display: flex;
-      background-color:rgb(220, 184, 241);
-      height: 200px;
-      
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
     }
 
-    #emri{
-      display: inline;
-      font-family: monospace;
-      height:"80px";
-      width:"100px";
-      color: white;
+    .logo{
+      font-size: 32px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
     }
 
-    .navigation{
-      display: flex;
-      justify-content: flex-end;
-      list-style-type:none ;
-  
+    .navBar a{
+      position: relative;
+      font-size: 18px;
+      color:#fff;
+      text-decoration: none;
+      font-weight: 700;
+      margin-left: 40px;
     }
-  
-    ul{
-    width: 40%;
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: stretch;
-    
-  }
-  ul li:hover {
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: 3px solid rgb(255, 0, 217);
-    
-  }
-  
+
+    .theMiddle{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .theMiddle img{
+      height: 850px;
+      width: 620px;
+      align-items: center;
+      padding-top: 120px;
+      padding-right: 60px;
+      border-radius: 50%;
+    }
+
+    .theMiddle h1{
+      position: relative;
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      margin-left: 40px;
+    }
   </style>
+
 </head>
 <body>
-  <div class ="header">
-    <img src="logo pic.png" alt="logo" height="80px" width="100px">
-    <h1 id="emri">OPTIKA</h1>
-      <ul>
-        <li>HOME</li>
-        <li>ABOUT US</li>
-        <li>PRODUCTS</li>
-        <li>SIGN UP</li>
-      </ul>
+<!------------------------------------------------>
+  <header class="header">
 
-  </div>
+    <a href="logoja.png" class="logo">ClearVue</a>
 
+    <nav class="navBar">
+
+      <a class="home" href="">Home</a>
+      <a class="home" href="">About Us</a>
+      <a class="home" href="">Products</a>
+      <a class="home" href="">Contact</a>
+
+    </nav>
+
+  </header>
+<!------------------------------------------------>
+    <div class="theMiddle">
+
+      <h1><i>YOUR vision, OUR passion</i></h1>
+
+      <img src="foto1.png" alt="Photo">
+
+    </div>
+<!------------------------------------------------>
 <script>
       alert("Welcome to Optika");
       confirm("Shop and find your 'vison'");
-      
 
 </script>
-
+<!------------------------------------------------>
 </body>
+
 </html>
