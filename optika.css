@@ -78,7 +78,6 @@
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
-  margin-top: 300px;
 }
 .img{
 display: flex;
@@ -95,4 +94,13 @@ justify-content: space-between;
     font-style: inherit;
     font-weight: 700;
     margin-right: 60px;
+}
+
+.shopi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+  margin-top: 10px;
+  color: #fff600;
 }
