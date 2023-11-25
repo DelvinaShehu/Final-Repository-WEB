@@ -7,7 +7,7 @@
 
   body{
     min-height: 100vh;
-    background: url(backroundimg.png) no-repeat;
+    background: url(Grandville.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -28,7 +28,7 @@
 
   .logo{
     font-size: 32px;
-    color: #fff;
+    color: rgba(165, 42, 42, 0.611);
     text-decoration: none;
     font-weight: 700;
   }
@@ -36,7 +36,7 @@
   .navBar a{
     position: relative;
     font-size: 18px;
-    color:#fff;
+    color:rgba(165, 42, 42, 0.611);
     text-decoration: none;
     font-weight: 700;
     margin-left: 40px;
@@ -45,7 +45,7 @@
   .navBar a:hover{
     font-weight: bold;
     cursor: pointer;
-   border-bottom: 3px solid rgb(231, 90, 20);
+   border-bottom: 3px solid rgb(135, 53, 13);
   }
  
  
@@ -56,38 +56,37 @@
   }
 
   .theMiddle img{
-    height: 850px;
-    width: 620px;
+    height: 890px;
+    width: 600px;
     align-items: center;
     padding-top: 120px;
     padding-right: 60px;
     border-radius: 50%;
+    
   }
 
   .theMiddle h1{
     position: relative;
     font-size: 40px;
-    color: #fff;
+    color: rgba(213, 109, 109, 0.611);
     text-decoration: none;
     font-weight: 700;
     margin-left: 40px;
   }
 
 .foto{
-  width: 55%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .img{
  display: flex;
-flex-direction: row;
-width: 550px;
-height: 500px; 
-justify-content: space-between;
-gap: 1rem;
+}
+
+.img img{
+  height: 500px;
+  width: 380px;
+  margin-right: 10px;
 }
 .h2{
   position: fixed;
@@ -107,7 +106,7 @@ gap: 1rem;
   align-items: center;
   margin-top: 8%;
   margin-bottom: 10px;
-  color: #fff600;
+  color: lightblue;
 }
 
 .paragrafi h4{
@@ -130,6 +129,22 @@ gap: 1rem;
   .paragrafi{
     border-color: black;
     border-radius:10px ;
+  }
+
+  .johover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fenty{
+    display: flex;
+  }
+  .fenty img{
+    height: 500px;
+    width: 380px;
+    margin-right: 10px;
+    /* box-shadow: 0 0 10px rgb(167, 167, 229); */
   }
 
   
