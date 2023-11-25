@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;  
+  }
+
+  body{
+    min-height: 100vh;
+    background: url(backroundimg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+  }
+
+  .logo{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .navBar a{
+    position: relative;
+    font-size: 18px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 40px;
+  }
+
+  .navBar a:hover{
+    font-weight: bold;
+    cursor: pointer;
+   border-bottom: 3px solid rgb(231, 90, 20);
+  }
+ 
+ 
+  .theMiddle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .theMiddle img{
+    height: 850px;
+    width: 620px;
+    align-items: center;
+    padding-top: 120px;
+    padding-right: 60px;
+    border-radius: 50%;
+  }
+
+  .theMiddle h1{
+    position: relative;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 40px;
+  }
+
+.foto{
+  width: 55%;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  margin-top: 300px;
+}
+.img{
+display: flex;
+flex-direction: inherit;
+width: 550px;
+height: 500px;
+justify-content: space-between;
+}
+.h2{
+  position: fixed;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-style: inherit;
+    font-weight: 700;
+    margin-right: 60px;
+}
