@@ -76,15 +76,18 @@
 .foto{
   width: 55%;
   display: flex;
-  justify-content:center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  flex-direction: row;
 }
 .img{
-display: flex;
-flex-direction: inherit;
+ display: flex;
+flex-direction: row;
 width: 550px;
-height: 500px;
+height: 500px; 
 justify-content: space-between;
+gap: 1rem;
 }
 .h2{
   position: fixed;
@@ -94,13 +97,39 @@ justify-content: space-between;
     font-style: inherit;
     font-weight: 700;
     margin-right: 60px;
-}
+    margin-top: 8% ;
+    margin-bottom: 10px;
+  }
 
 .shopi{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 8%;
-  margin-top: 10px;
+  margin-bottom: 10px;
   color: #fff600;
 }
+
+.paragrafi h4{
+  font-size: 35px;
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+}
+
+.paragrafi p{
+    font-size:20px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .paragrafi{
+    border-color: black;
+    border-radius:10px ;
+  }
+
+  
