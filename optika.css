@@ -7,7 +7,7 @@
 
   body{
     min-height: 100vh;
-    background: url(Grandville.jpeg) no-repeat;
+    background-color: beige;
     background-size: cover;
     background-position: center;
   }
@@ -91,7 +91,7 @@
 .h2{
   position: fixed;
     font-size: 40px;
-    color: #fff;
+    color:  rgba(213, 109, 109, 0.611);
     text-decoration: none;
     font-style: inherit;
     font-weight: 700;
@@ -106,12 +106,12 @@
   align-items: center;
   margin-top: 8%;
   margin-bottom: 10px;
-  color: lightblue;
+  color:  rgba(213, 109, 109, 0.611);
 }
 
 .paragrafi h4{
   font-size: 35px;
-  color: #fff;
+  color: rgba(213, 109, 109, 0.611);
   text-decoration: underline;
   font-weight: 700;
   text-align: center;
@@ -120,7 +120,7 @@
 
 .paragrafi p{
     font-size:20px;
-    color: #fff;
+    color: rgba(213, 109, 109, 0.611);
     text-decoration: none;
     text-align: center;
     justify-content: center;
@@ -131,20 +131,111 @@
     border-radius:10px ;
   }
 
-  .johover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* .johover{
+    display: inline-block;
+    margin: 10px;
+    position: relative;
   }
-  
-  .fenty{
+   */
+  /* .fenty{
     display: flex;
   }
   .fenty img{
     height: 500px;
     width: 380px;
     margin-right: 10px;
+    
     /* box-shadow: 0 0 10px rgb(167, 167, 229); */
+  /* } */ 
+  .image-row {
+    display: flex;
+    justify-content: center;
+  }
+  /* Style for the image container */
+  .image-container {
+    display: inline-block; /* Use inline-block to display images in a row */
+    margin: 10px; /* Add margin for spacing */
+    position: relative;
+    margin-bottom: 70px;
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+
+  /* Default image */
+  .image-container img {
+    width: 450px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    transition: opacity 0.3s ease-in-out;
+    margin-bottom: 40px;
   }
 
+  /* Hover effect */
+  .image-container:hover img {
+    opacity: 0; /* Change to 1 if you want to fade in the new image */
+  }
+
+  /* New image to display on hover */
+  .image-container:hover .hover-image {
+    opacity: 1;
+  }
+
+  .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
   
+  .collection{
+    position: relative;
+    font-size: 20px;
+    color: grey;
+    text-decoration: none;
+    font-weight: 600; 
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+.eyedoctor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+.eyedoctor p{
+  position: relative;
+    font-size: 20px;
+    color: rgba(213, 109, 109, 0.611);
+    text-decoration: none;
+    font-weight: 600; 
+    margin-left: 40px;
+    
+  }
+
+.eyedoctor img{
+  height: 700px;
+  width: 1000px;
+  align-items: center;
+}
+
+.eyedoctor p:nth-child(2){
+  position: relative;
+    font-size: 22px;
+    color: rgba(213, 109, 109, 0.611);
+    text-decoration: none;
+    font-weight: 600; 
+    margin-left: 40px;
+    position: absolute;
+    margin-top: 120px;
+}
+
+/* .image-container{
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+} */
