@@ -151,10 +151,10 @@
     display: flex;
     justify-content: center;
   }
-  /* Style for the image container */
+ 
   .image-container {
-    display: inline-block; /* Use inline-block to display images in a row */
-    margin: 10px; /* Add margin for spacing */
+    display: inline-block; 
+    margin: 10px; 
     position: relative;
     margin-bottom: 70px;
     color: grey;
@@ -163,20 +163,20 @@
   }
   
 
-  /* Default image */
+ 
   .image-container img {
-    width: 450px; /* Adjust the width as needed */
-    height: 500px; /* Adjust the height as needed */
+    width: 450px; 
+    height: 500px; 
     transition: opacity 0.3s ease-in-out;
     margin-bottom: 40px;
   }
 
-  /* Hover effect */
+ 
   .image-container:hover img {
-    opacity: 0; /* Change to 1 if you want to fade in the new image */
+    opacity: 0; 
   }
 
-  /* New image to display on hover */
+ 
   .image-container:hover .hover-image {
     opacity: 1;
   }
@@ -191,7 +191,7 @@
     transition: opacity 0.3s ease-in-out;
   }
   
-  .collection{
+  .collection p{
     position: relative;
     font-size: 20px;
     color: grey;
@@ -233,12 +233,6 @@
     position: absolute;
     margin-top: 120px;
 }
-
-/* .image-container{
-  color: grey;
-  text-align: center;
-  text-decoration: none;
-} */
 
 footer{
   background-color: rgb(0, 0, 0);

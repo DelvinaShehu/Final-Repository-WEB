@@ -141,7 +141,7 @@
         <p><b>Loewe Inflated Square sunglasses</b></p>
         <p><em>244.88 €</em></p>
       </div>
-      
+       
       <div class="image-container">
         <img src="flamesyze.jpg" alt="Default Image 3">
         <img class="hover-image" src="flamemodele.jpg" alt="Hover Image 3">
@@ -149,10 +149,7 @@
         <p><em>280.60 €</em></p>
       </div>
     
-    
-    
     </div>
-  
 </div>
 <br>
 <br>
@@ -161,8 +158,30 @@
 
   <div class = "products">
     <p><b>OUR NEWEST CAMPAIGN</b></p>
-      <div class="campaign">
-        <img src="fotoo2.jpg" alt="Default Image 3">
+        <div id="kontenti">
+          <header>
+          <img id="slideshow" />
+          </header>
+          <button onclick="changeImg()">Next</button>
+      </div>
+  
+      <script>
+          let i = 0;
+          let imgArray = ['campaign.jpg','campaign1.jpg','campaign2.jpg','campaign3.jpg','campaign4.jpeg'];
+  
+          function changeImg(){
+              document.getElementById('slideshow').src = imgArray[i];
+  
+              if(i< imgArray.length -1){
+                  i++;
+              }
+              else{
+                  i=0;
+              }
+              //setTimeout("changeImg()", 2600);
+          }
+          document.addEventListener(onload, changeImg());
+      </script>
 
       </div>
   </div>
@@ -175,9 +194,12 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
 
-  <footer>
+<footer>
   <div class="f">
       <h2>About ClearVue Optics</h2>
       <h2>Our Links</h2>
@@ -207,8 +229,9 @@
       <p>Copyright 2020 ClearVue Optics. All rights reserved.</p>
   </div>
 </footer>
-
-
+<br>
+<br>
+<br>
 
 
 <body>
