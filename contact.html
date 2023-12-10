@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
-    <title>Contact</title>
+    <title>ClearVue</title>
 </head>
 
 
@@ -18,45 +18,116 @@
         <a class="home" href="AboutUs.html">About Us</a>
         <a class="home" href="products.html">Products</a>
         <a class="home" href="">Contact</a>
-  
+        <a class="home" href="LogIn forma.html">Log In</a>
     </nav>
 
 </header>
+<br>
+<br>
+<br>
+<br>
+<main class="container">
+    <div class="contact-box">
+      <section class="left-section">
+        <h2>Contact Us</h2>
+        <br>
+        <br>
+        <p>Contact us for an exclusive eyewear experience that blends elegance with functionality.</p>
+        <br>
+        <p>Feel free to reach out for any inquiries or assistance.</p>
+        <br>
+        <br>
 
-<form id="myForm">
-    <label>Name:</label>
-    <input type="text" id="name">
-    <div class="error-message" id="nameError"></div>
+        <form action="#" method="post">
+          <input type="text" placeholder="Enter your username" required>
+          <br>
+          <textarea placeholder="Your message..." rows="4" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="contact-details">
+            <h3>Find Us</h3>
+            <br>
+            <br>
+            <p>Phone: +1 234 5678</p>
+            <br>
+            <p>Location: 10 Rue de l'École, Paris, France</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="social-links">
+              <p> Find Us On Social Media</p>
+              <br>
+                <a href="#" class="social-icon">
+                <img src="facebook.png" alt="Facebook">
+              </a>
+              <a href="#" class="social-icon">
+                <img src="instagram.png" alt="Instagram">
+              </a>
+              <a href="#" class="social-icon">
+                <img src="twitter.png" alt="Twitter">
+              </a>
+              <a href="#" class="social-icon">
+                <img src="pinterest.png" alt="Twitter">
+              </a>
+            </div>
+    
+    
+    
+    </section>
 
-    <label>Email:</label>
-    <input type="text" id="email">
-    <div class="error-message" id="emailError"></div>
+      <section class="right-section">
+        <div class="eyewear-photo">
+          <!-- Add your eyewear brand photo here -->
+          <img src="backu.jpg" alt="Eyewear Brand">
+        </div>
+          </div>
+      </section>
 
-    <button type="button" onclick="validateForm()">Submit</button>
-</form>
-<script>
-    let nameRegex = /^[A-Z][a-z]{3,8}$/;
-    let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-
-    function validateForm(){
-        let nameInput = document.getElementById('name');
-        let nameError = document.getElementById('nameError');
-        let emailInput = document.getElementById('email');
-        let emailError = document.getElementById('emailError');
-
-        nameError.innerText = '';
-        emailError.innerText = '';
-
-        if(!nameRegex.test(nameInput.value)){
-            nameError.innerText = 'invalid name';
-            return;
-        }
-        if(!emailRegex.test(emailInput.value)){
-            emailError.innerText = 'invalid email';
-            return;
-        }
-
-        alert('form submitted succesfully!');
-    }
-</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <div class="f">
+        <h2>About ClearVue Optics</h2>
+        <h2>Our Links</h2>
+        <div class="ff">
+            <a href=""><img src="instagram.png" alt="" style height="50px", width="50px"></a>
+            <a href=""><img src="twitter.png" alt="" style height="70px", width="70px"></a>
+            <a href=""><img src="facebook.png" alt="" style height="50px", width="50px"></a>
+            <a href=""><img src="pinterest.png" alt="" style height="50px", width="50px"></a>
+        </div>
+    </div>
+    <div class="footermain">
+        <div class="footerleft">
+            <p>From designer frames to cutting-edge lenses, we're your destination for fashionable eyewear and precise vision solutions.</p>
+        </div>
+        <div class="footercenter">
+            <p>Advertise</p>
+            <p>Support</p>
+            <p>Our Company</p>
+            <p>Contact</p>
+        </div>
+        <div class="footerright">
+            <p>Terms of use</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+    <div class="fundi">
+        <p>Copyright 2020 ClearVue Optics. All rights reserved.</p>
+    </div>
+  </footer>
+  <br>
+  <br>
+  <br>
+  <br>
 </body>
