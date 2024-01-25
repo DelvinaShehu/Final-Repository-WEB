@@ -39,7 +39,9 @@
         <br>
 
         <form action="#" method="post">
-          <input type="text" placeholder="Enter your username" required>
+          <input type="text"  id = "username "placeholder="Enter your username" required>
+          <br>
+          <input type="text" id = "password" placeholder="Enter your password" required>
           <br>
           <textarea placeholder="Your message..." rows="4" required></textarea>
           <button type="submit">Send</button>
@@ -82,7 +84,6 @@
 
       <section class="right-section">
         <div class="eyewear-photo">
-          <!-- Add your eyewear brand photo here -->
           <img src="backu.jpg" alt="Eyewear Brand">
         </div>
           </div>
@@ -130,4 +131,24 @@
   <br>
   <br>
   <br>
+
+  
+  <script>
+    function validateForm(){
+      let username = document.getElementById('username').value;
+      let password = document.getElementById('password').value;
+
+
+      if(username.length < 8 && username.length > 15){
+        alert('Username must be longer than 8 characters and shorter than 15 characters');
+      }
+
+      if(password.length < 6){
+        alert('Password must be at least 6 charcters long');
+        return false;
+      }
+    }
+
+  </script>
 </body>
+</html>
