@@ -12,6 +12,15 @@
     <a href="logoja.png" class="logo">ClearVue</a>
 
     <nav class="navBar">
+      
+      <div class="dropdown">
+        <button class="dropbtn">Dashboard</button>
+        <div class="dropdown-content">
+          <a href="dashboard.html">Users</a>
+          <a href="productsTable.html">Products</a>
+          <a href="ContactTable.html">Contact</a>
+        </div>
+      </div>
 
       <a class="home" href="optika.html">Home</a>
       <a class="home" href="AboutUs.html">About Us</a>
@@ -35,12 +44,12 @@
 
       <label for="surname">Surname:</label>
       <input type="text" id="surname" name="surname" required>
-
-      <label for="dateOfBirth">Date of Birth:</label>
-      <input type="date" id="dateOfBirth" name="dateOfBirth" required>
   
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
   
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
@@ -72,7 +81,12 @@
         return false;
       }
 
-
+      let usernameRegex = /^[a-zA-Z\s]+$/;
+      if(!usernameRegex.test(username)){
+        alert('Please enter a valid username.');
+        return false;
+      }
+      
       let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if(!emailRegex.test(email)){
         alert('Please enter a valid email address');
@@ -88,16 +102,6 @@
         alert('Passwords do not match');
         return false;
       }
-
-      ///////////Validate Date of Birth:
-
-      var dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-
-      if (!dateRegex.test(dateOfBirth)) {
-        alert('Please enter a valid date of birth in YYYY-MM-DD format.');
-        return false;
-      }
-      return true; 
     }
   </script>
   
