@@ -1,13 +1,19 @@
 <?php
 session_start();
 
+include_once '../Register - Login Form/registerController.php';
+
 if (isset($_SESSION['name']) && ($_SESSION['surname']) && 
     ($_SESSION['email']) && ($_SESSION['username']) && ($_SESSION['password'])) {
     header('Location: products.php');
     exit();
 }
 
+<<<<<<< HEAD
 
+=======
+// include_once '../Register - Login Form/registerController.php';
+>>>>>>> 7902d45dca8c07f5822b8e98e5252f996ed6d5cf
 ?>
 
 
@@ -20,7 +26,7 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
   <link rel="stylesheet" href="RegisterForm.css">
 </head>
 <body>
-  <header class="header">
+  <!-- <header class="header">
 
     <a href="logoja.png" class="logo">ClearVue</a>
 
@@ -37,7 +43,7 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
   </header>
   
   <br>
-  <br>
+  <br> -->
   
 
   <div class="RegisterPage">

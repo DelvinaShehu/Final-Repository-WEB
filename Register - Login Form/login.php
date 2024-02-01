@@ -35,7 +35,6 @@ alert("Resgister or Log in to see the products")
       }
   }*/
 
-
 ?>
 
 
@@ -76,7 +75,11 @@ alert("Resgister or Log in to see the products")
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
   
+<<<<<<< HEAD
       <input type="submit" name="submit" value="Log In">
+=======
+      <input type="submit" value="Log In" onclick="redirectToProducts()">
+>>>>>>> 7902d45dca8c07f5822b8e98e5252f996ed6d5cf
     </form>
     <br>
     <p>Don't have an account? <a href="Register.php">Register here</a></p>

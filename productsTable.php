@@ -24,11 +24,11 @@
         </div>
       </div>
 
-      <a class="home" href="optika.html">Home</a>
-      <a class="home" href="">About Us</a>
-      <a class="home" href="products.html">Products</a>
-      <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="optika.php">Home</a>
+      <a class="home" href="AboutUs.php">About Us</a>
+      <a class="home" href="products.php">Products</a>
+      <a class="home" href="contact.php">Contact</a>
+      <a class="home" href="logout.php">Log Out</a>
 
     </nav>
 

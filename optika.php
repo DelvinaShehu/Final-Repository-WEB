@@ -1,4 +1,16 @@
- <!DOCTYPE html>
+<?php
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['username']))
+    header("location:login.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
+<!------------------------------------------------>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,20 +27,21 @@
 
     <nav class="navBar">
 
-    <div class="dropdown">
+    <div class="class=<?php echo $hide?>">
+      <div class="dropdown">
         <button class="dropbtn">Dashboard</button>
         <div class="dropdown-content">
-          <a href="dashboard.html" class="<?php echo $hide?>">Users</a>
-          <a href="productsTable.html">Products</a>
-          <a href="ContactTable.html">Contact</a>
+          <a href="dashboard.php">Users</a>
+          <a href="productsTable.php">Products</a>
+          <a href="ContactTable.php">Contact</a>
         </div>
       </div>
-      
-      <a class="home" href="optika.html">Home</a>
-      <a class="home" href="AboutUs.html">About Us</a>
-      <a class="home" href="products.html">Products</a>
-      <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html"<?php echo $hide?>>Log In</a>
+   </div> 
+   
+      <a class="home" href="optika.php">Home</a>
+      <a class="home" href="AboutUs.php">About Us</a>
+      <a class="home" href="products.php">Products</a>
+      <a class="home" href="contact.php">Contact</a>
       <a class="home" href="logout.php">Log Out</a>
 
     </nav>
@@ -178,3 +191,7 @@
 </body>
 
 </html>
+
+<?php
+  }
+?>
