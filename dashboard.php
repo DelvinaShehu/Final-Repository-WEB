@@ -54,6 +54,34 @@
           <th>Delete</th>
         </tr>
       </thead>
+
+      <?php 
+             include_once '../repository/userRepository.php';
+
+             $userRepository = new UserRepository();
+
+             $user = $userRepository->getAllUsers();
+
+             foreach($user as $users){
+                echo 
+                "
+                <tr>
+                     <td>$users[Id]</td>
+                     <td>$users[Name]</td>
+                     <td>$users[Surname] </td>
+                     <td>$users[Email] </td>
+                     <td>$users[Username] </td>
+                     <td>$users[Password] </td>
+                     <td><a href='edit.php?id=$users[Id]'>Edit</a> </td>
+                     <td><a href='delete.php?id=$users[Id]'>Delete</a></td>
+                     
+                </tr>
+                ";
+             }
+
+             
+             
+             ?>
     </table>
 </body>
 </html>

@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClearVue</title>
+  <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
-    
 
-    <table border="1">
-             <tr>
-                 <th>ID</th>
-                 <th>NAME</th>
-                 <th>SURNAME</th>
-                 <th>EMAIL</th>
-                 <th>USERNAME</th>
-                 <th>PASSWORD</th>
-                 <th>Edit</th>
-                 <th>Delete</th>
-                 
-             </tr>
+  <header class="header">
 
-             <?php 
-             include_once '../Register - Login Form//userRepository.php';
+    <a href="logoja.png" class="logo">ClearVue</a>
 
-             $userRepository = new UserRepository();
+    <nav class="navBar">
 
-             $users = $userRepository->getAllUsers();
+      <div class="dropdown">
+        <button class="dropbtn">Dashboard</button>
+        <div class="dropdown-content">
+          <a href="dashboard.html">Users</a>
+          <a href="productsTable.html">Products</a>
+          <a href="ContactTable.html">Contact</a>
+        </div>
+      </div>
+      
+      <a class="home" href="optika.html">Home</a>
+      <a class="home" href="">About Us</a>
+      <a class="home" href="products.html">Products</a>
+      <a class="home" href="contact.html">Contact</a>
+      <a class="home" href="LogIn forma.html">Log In</a>
 
-             foreach($users as $user){
-                echo 
-                "
-                <tr>
-                     <td>$user[Id]</td>
-                     <td>$user[Name]</td>
-                     <td>$user[Surname] </td>
-                     <td>$user[Email] </td>
-                     <td>$user[Username] </td>
-                     <td>$user[Password] </td>
-                     <td><a href='edit.php?id=$user[Id]'>Edit</a> </td>
-                     <td><a href='delete.php?id=$user[Id]'>Delete</a></td>
-                     
-                </tr>
-                ";
-             }
+    </nav>
 
-             
-             
-             ?>
+  </header>
+
+  <br>
+  <br>
+  <h2><em>Users:</em></h2>
+  <br>
+  <br>
+  <hr>
+   
+  <table class="content-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Email</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
     </table>
 </body>
 </html>

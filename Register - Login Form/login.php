@@ -1,9 +1,26 @@
 <?php
 session_start();
+echo '<script>
+alert("Resgister or Log in to see the products")
+</script>';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Check login credentials (replace this with your actual login logic)
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
-if (isset($_SESSION['user_id'])) {
-    header('Location: products.php');
-    exit();
+  // Assuming login is successful
+  if ($username === 'username' && $password === 'password') {
+      // Set session variables (you should have your actual authentication logic here)
+      $_SESSION['username'] = $username;
+      $_SESSION['password'] = $password;
+echo("hello");
+      // Redirect to the products page
+      header('Location: products.php');
+      exit();
+  } else {
+      // Display an error message or handle unsuccessful login
+      echo 'Invalid username or password';
+  }
 }
 
 ?>
@@ -16,7 +33,12 @@ if (isset($_SESSION['user_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClearVue</title>
   <link rel="stylesheet" href="LogIn forma.css">
-  
+  <script>
+        // JavaScript function to redirect to the products page
+        function redirectToProducts() {
+            window.location.href = 'products.php';
+        }
+    </script>
 </head>
 <body>
   <header class="header">
@@ -27,9 +49,9 @@ if (isset($_SESSION['user_id'])) {
 
       <a class="home" href="optika.html">Home</a>
       <a class="home" href="AboutUs.html">About Us</a>
-      <a class="home" href="products.html">Products</a>
+      <a class="home" href="products.php">Products</a>
       <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="login.php">Log In</a>
 
     </nav>
 
@@ -47,10 +69,10 @@ if (isset($_SESSION['user_id'])) {
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
   
-      <input type="submit" value="Log In">
+      <input type="submit" value="Log In" onclick="redirecttoProducts()">
     </form>
     <br>
-    <p>Don't have an account? <a href="RegisterForm.html">Register here</a></p>
+    <p>Don't have an account? <a href="Register.php">Register here</a></p>
   </div>
 
   <script>
@@ -69,7 +91,11 @@ if (isset($_SESSION['user_id'])) {
       }
     }
 
+   
+    function redirectToProducts() {
+        window.location.href = 'products.php';
+    }
+
   </script>
-  
 </body>
 </html>

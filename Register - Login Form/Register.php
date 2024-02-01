@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['name'])) {
     header('Location: products.php');
     exit();
 }
@@ -25,10 +25,10 @@ if (isset($_SESSION['user_id'])) {
     <nav class="navBar">
 
       <a class="home" href="optika.html">Home</a>
-      <a class="home" href="AboutUs.html">About Us</a>
-      <a class="home" href="products.html">Products</a>
+      <a class="home" href="aboutUs.php">About Us</a>
+      <a class="home" href="products.php">Products</a>
       <a class="home" href="">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="login.php">Log In</a>
 
     </nav>
 
@@ -59,7 +59,7 @@ if (isset($_SESSION['user_id'])) {
       <label for="confirm-password">Confirm Password:</label>
       <input type="password" id="confirmPassword" name="confirmPassword" required>
   
-      <input type="submit" value="Register">
+      <input type="submit" name = "registerBtn" value="Register">
     </form>
   </div>
 
@@ -112,7 +112,6 @@ if (isset($_SESSION['user_id'])) {
     }
   </script>
   <?php include_once '../Register - Login Form/registerController.php';
-     include '../Pages/contactUs.php';
   ?>
 
 </body>

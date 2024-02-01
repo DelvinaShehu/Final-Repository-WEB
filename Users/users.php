@@ -1,6 +1,6 @@
 <?php
 
-    class Users{
+    class User{
         private $id;
         private $name;
         private $surname;
@@ -18,7 +18,7 @@
         }
 
         function getId(){
-            return $this->id;
+            return $this->id; 
         }
         function getName(){
             return $this->name;

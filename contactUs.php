@@ -84,7 +84,7 @@
 
       <section class="right-section">
         <div class="eyewear-photo">
-          <img src="C:\xampp\htdocs\WebProject\web projekti final\Final-Repository-WEB\backu.jpg" alt="Eyewear Brand">
+          <img src="backu.jpg" alt="Eyewear Brand">
         </div>
           </div>
       </section>

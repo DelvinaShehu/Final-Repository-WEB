@@ -1,14 +1,25 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
+// Check if the user is logged in
+function checkLoggedIn() {
+    // Assuming you have a variable 'isLoggedIn' that indicates the login status
+    $isLoggedIn = isset($_SESSION['username']) && isset($_SESSION['password']);
+
+    if (!$isLoggedIn) {
+        // Store the original destination (products page) in session
+        $_SESSION['products.php'] = 'products.php';
+
+        // Redirect to login page
+        header('Location: login.php');
+        exit();
+    
+    }
 }
 
+// Call the function before any HTML content is sent to the browser
+checkLoggedIn();
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -31,7 +42,7 @@ if (!isset($_SESSION['user_id'])) {
         <a class="home" href="AboutUs.html">About Us</a>
         <a class="home" href="">Products</a>
         <a class="home" href="contact.html">Contact</a>
-        <a class="home" href="LogIn forma.html">Log In</a>
+        <a class="home" href="login.php">Log In</a>
   
     </nav>
 
