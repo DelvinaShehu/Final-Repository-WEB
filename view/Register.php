@@ -26,10 +26,10 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
 
     <nav class="navBar">
 
-      <a class="home" href="optika.html">Home</a>
-      <a class="home" href="aboutUs.php">About Us</a>
+      <a class="home" href="optika.php">Home</a>
+      <a class="home" href="AboutUs.php">About Us</a>
       <a class="home" href="products.php">Products</a>
-      <a class="home" href="">Contact</a>
+      <a class="home" href="contact.php">Contact</a>
       <a class="home" href="login.php">Log In</a>
 
     </nav>
