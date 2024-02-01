@@ -7,7 +7,7 @@
     <title>ClearVue</title>
 </head>
 
-
+<body>
 <header class="header">
     
     <a href="logoja.png" class="logo">ClearVue</a>
@@ -25,7 +25,7 @@
       
         <a class="home" href="optika.html">Home</a>
         <a class="home" href="AboutUs.html">About Us</a>
-        <a class="home" href="">Products</a>
+        <a class="home" href="products.html">Products</a>
         <a class="home" href="contact.html">Contact</a>
         <a class="home" href="LogIn forma.html">Log In</a>
   
@@ -242,9 +242,6 @@
 <br>
 <br>
 <br>
-
-
-<body>
     
 </body>
 </html>
