@@ -1,3 +1,36 @@
+<?php
+  if(isset($_POST['login'])){
+    if(empty($_POST['username']) || empty($_POST['password'])){
+      echo "<script> Please fill the required fields! </script>";
+    }else{
+        
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        include_once 'users.php';
+        $i=0;
+        
+        foreach($users as $user){
+          if($user['username'] == $username && $user['password'] == $password){
+            session_start();
+      
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['role'] = $user['role'];
+            $_SESSION['loginTime'] = date("H:i:s");
+            header("location:home.php");
+            exit();
+          }else{
+            $i++;
+            if($i == sizeof($users)) {
+              echo "<script> Incorrect Username or Password! </script>";
+              exit();
+            }
+          }
+        }
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,36 +41,9 @@
   
 </head>
 <body>
-  <header class="header">
-
-    <a href="logoja.png" class="logo">ClearVue</a>
-
-    <nav class="navBar">
-
-    <div class="dropdown">
-        <button class="dropbtn">Dashboard</button>
-        <div class="dropdown-content">
-          <a href="dashboard.html">Users</a>
-          <a href="productsTable.html">Products</a>
-          <a href="ContactTable.html">Contact</a>
-        </div>
-      </div>
-      
-      <a class="home" href="optika.html">Home</a>
-      <a class="home" href="AboutUs.html">About Us</a>
-      <a class="home" href="products.html">Products</a>
-      <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
-
-    </nav>
-
-  </header>
- 
-  <br>
-  <br>
   
   <div class="RegisterPage">
-    <form method="post" onsubmit="validateForm">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="validateForm">
 
       <label for="name">Username:</label>
       <input type="text" id="username" name="username" required>

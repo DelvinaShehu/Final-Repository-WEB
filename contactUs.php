@@ -14,11 +14,20 @@
     
     <nav class="navBar">
 
-        <a class="home" href="optika.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Dashboard</button>
+        <div class="dropdown-content">
+          <a href="dashboard.php">Users</a>
+          <a href="productsTable.php">Products</a>
+          <a href="ContactTable.php">Contact</a>
+        </div>
+      </div>
+      
+        <a class="home" href="optika.php">Home</a>
         <a class="home" href="aboutUs.php">About Us</a>
-        <a class="home" href="products.html">Products</a>
-        <a class="home" href="">Contact</a>
-        <a class="home" href="LogIn forma.html">Log In</a>
+        <a class="home" href="products.php">Products</a>
+        <a class="home" href="contactUs.php">Contact</a>
+        <a class="home" href="logout.php">Log Out</a>
     </nav>
 
 </header>

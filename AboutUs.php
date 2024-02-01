@@ -16,17 +16,17 @@
     <div class="dropdown">
         <button class="dropbtn">Dashboard</button>
         <div class="dropdown-content">
-          <a href="dashboard.html">Users</a>
-          <a href="productsTable.html">Products</a>
-          <a href="ContactTable.html">Contact</a>
+          <a href="dashboard.php">Users</a>
+          <a href="productsTable.php">Products</a>
+          <a href="ContactTable.php">Contact</a>
         </div>
       </div>
       
-      <a class="home" href="optika.html">Home</a>
-      <a class="home" href="">About Us</a>
-      <a class="home" href="products.html">Products</a>
-      <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="optika.php">Home</a>
+      <a class="home" href="AboutUs.php">About Us</a>
+      <a class="home" href="products.php">Products</a>
+      <a class="home" href="contact.php">Contact</a>
+      <a class="home" href="logout.php">Log Out</a>
 
     </nav>
 

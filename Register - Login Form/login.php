@@ -7,7 +7,6 @@ alert("Resgister or Log in to see the products")
     header('Location: products.php');
   }
 
-
 ?>
 
 
@@ -54,7 +53,7 @@ alert("Resgister or Log in to see the products")
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
   
-      <input type="submit" value="Log In" onclick="redirecttoProducts()">
+      <input type="submit" value="Log In" onclick="redirectToProducts()">
     </form>
     <br>
     <p>Don't have an account? <a href="Register.php">Register here</a></p>

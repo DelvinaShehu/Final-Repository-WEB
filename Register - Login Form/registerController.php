@@ -18,8 +18,6 @@ if(isset($_POST['registerBtn'])){
         $userRepository = new UserRepository();
 
         $userRepository->insertUser($user);
-
-
     }
 }
 

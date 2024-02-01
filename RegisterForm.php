@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="RegisterForm.css">
 </head>
 <body>
-  <header class="header">
+  <!-- <header class="header">
 
     <a href="logoja.png" class="logo">ClearVue</a>
 
@@ -25,8 +25,8 @@
       <a class="home" href="optika.html">Home</a>
       <a class="home" href="AboutUs.html">About Us</a>
       <a class="home" href="products.html">Products</a>
-      <a class="home" href="">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="contact.php">Contact</a>
+      <a class="home" href="logout.php">Log Out</a>
 
     </nav>
 
@@ -34,7 +34,7 @@
   
   <br>
   <br>
-  
+   -->
 
   <div class="RegisterPage">
     <form action="#" method="post" onsubmit="validateForm">
