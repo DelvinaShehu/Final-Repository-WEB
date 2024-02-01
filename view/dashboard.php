@@ -28,7 +28,7 @@
       <a class="home" href="">About Us</a>
       <a class="home" href="products.html">Products</a>
       <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="">Log In</a>
 
     </nav>
 
