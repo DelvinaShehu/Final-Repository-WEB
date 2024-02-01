@@ -1,23 +1,22 @@
 <?php
 session_start();
 
-// Check if the user is logged in
 function checkLoggedIn() {
-    // Assuming you have a variable 'isLoggedIn' that indicates the login status
+    
     $isLoggedIn = isset($_SESSION['username']) && isset($_SESSION['password']);
 
     if (!$isLoggedIn) {
-        // Store the original destination (products page) in session
+        
         $_SESSION['products.php'] = 'products.php';
 
-        // Redirect to login page
+        
         header('Location: login.php');
         exit();
     
     }
 }
 
-// Call the function before any HTML content is sent to the browser
+
 checkLoggedIn();
 ?>
 
