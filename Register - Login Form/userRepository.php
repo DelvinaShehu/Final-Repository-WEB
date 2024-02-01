@@ -78,8 +78,5 @@ class UserRepository{
    } 
 }
 
-//  $userRepo = new UserRepository;
-
-//  $userRepo->updateUser('1111','SSS','SSS','SSS','SSS','SSS');
 
 ?>

@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Set session variables (you should have your actual authentication logic here)
       $_SESSION['username'] = $username;
       $_SESSION['password'] = $password;
-echo("hello");
       // Redirect to the products page
       header('Location: products.php');
       exit();

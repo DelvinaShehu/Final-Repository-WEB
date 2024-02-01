@@ -47,7 +47,7 @@
   <h1 id="h1"> <em>SHOP AND FIND YOUR VISION</em> </h1>
 </div>
 
-<div class = "foto">
+<div class = "video">
       <div class="img">
         <video width="400" controls loop autoplay muted>
           <source src = "video.mp4" type="video/mp4">
@@ -127,9 +127,7 @@
   <div class="eyedoctor">
     
       <p><em>Regular eye check-ups are essential for healthy vision. Book an appointment with your eye care specialist today for comprehensive care and to safeguard your sight!</em></p>
-      
-      <p><u>Book your appointment now ! </u></p>
-      <img src="giphy (4).gif" alt="foto3"> 
+      <img src="giphy (4).gif" alt="foto3" class="foto"> 
   
   </div>
 

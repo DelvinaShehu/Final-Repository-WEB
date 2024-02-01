@@ -6,6 +6,7 @@ if (isset($_SESSION['name'])) {
     exit();
 }
 
+include_once '../Register - Login Form/registerController.php';
 ?>
 
 
@@ -47,17 +48,15 @@ if (isset($_SESSION['name'])) {
       <label for="surname">Surname:</label>
       <input type="text" id="surname" name="surname" required>
 
-      <label for="dateOfBirth">Date of Birth:</label>
-      <input type="date" id="dateOfBirth" name="dateOfBirth" required>
-  
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+
+
+      <label for="Username">Username:</label>
+      <input type="text" id="Username" name="username" required>
   
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
-  
-      <label for="confirm-password">Confirm Password:</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" required>
   
       <input type="submit" name = "registerBtn" value="Register">
     </form>
@@ -68,8 +67,10 @@ if (isset($_SESSION['name'])) {
       let name = document.getElementById('name').value;
       let surname = document.getElementById('surname').value;
       let email = document.getElementById('email').value;
+      let username = document.getElementById('username').value;
       let password = document.getElementById('password').value;
-      let confirmPassword = document.getElementById('confirmPassword').value;
+      
+      
 
       let nameRegex = /^[a-zA-Z\s]+$/;
       if(!nameRegex.test(name)){
@@ -89,30 +90,18 @@ if (isset($_SESSION['name'])) {
         alert('Please enter a valid email address');
         return false;
       }
-
+      let usernameRegex = /^[a-zA-Z\s]+$/;
+      if(!nameRegex.test(username)){
+        alert('Please enter a valid surname.');
+        return false;
+      }
       if(password.length < 6){
         alert('Password must be at least 6 charcters long');
         return false;
       }
 
-      if(password !== confirmPassword){
-        alert('Passwords do not match');
-        return false;
-      }
-
-      ///////////Validate Date of Birth:
-
-      var dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-
-      if (!dateRegex.test(dateOfBirth)) {
-        alert('Please enter a valid date of birth in YYYY-MM-DD format.');
-        return false;
-      }
-      return true; 
     }
+  
   </script>
-  <?php include_once '../Register - Login Form/registerController.php';
-  ?>
-
 </body>
 </html>

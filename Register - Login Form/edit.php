@@ -1,7 +1,7 @@
 
 <?php
 $userId = $_GET['id'];
-include_once '../Register - Login Form/userRepository.php';
+include_once 'Register - Login Form/userRepository.php';
 
 
 
@@ -23,23 +23,31 @@ $user  = $userRepository->getUserById($userId);
     <title>Document</title>
 </head>
 <body>
-    <h3>Edit User</h3>
-    <form action="" method="post">
-        <input type="text" name="id"  value="<?=$user['Id']?>" readonly> <br> <br>
-        <input type="text" name="name"  value="<?=$user['Name']?>"> <br> <br>
-        <input type="text" name="surname"  value="<?=$user['Surname']?>"> <br> <br>
-        <input type="text" name="email"  value="<?=$user['Email']?>"> <br> <br>
-        <input type="text" name="username"  value="<?=$user['Username']?>"> <br> <br>
-        <input type="text" name="password"  value="<?=$user['Password']?>"> <br> <br>
+<h3>Edit User</h3>
+  <form action="" method="post">
+       <input type="text" name="id" value="<?=$user['Id']?>" readonly>
+  
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<?=$user['Name']?>">
 
-        <input type="submit" name="editBtn" value="save"> <br> <br>
+      <label for="surname">Surname:</label>
+      <input type="text" name="surname" value="<?=$user['Surname']?>">
+  
+      <label for="email">Email:</label>
+      <input type="email" name="email" value="<?=$user['Email']?>">
+  
+      <label for="password">Password:</label>
+      <input type="password"  name="password" value="<?=$user['Password']?>">
+  
+      <input type="submit" name = "EditButton" value="save">
     </form>
+  </div>
 </body>
 </html>
 
 <?php 
 
-if(isset($_POST['editBtn'])){
+if(isset($_POST['EditButton'])){
     $id = $user['Id'];
     $name = $_POST['name'];
     $surname = $_POST['surname'];

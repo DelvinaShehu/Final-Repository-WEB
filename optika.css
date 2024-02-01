@@ -74,11 +74,19 @@
     margin-left: 40px;
   }
 
-.foto{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .video video {
+    width: 100%; 
+    max-width: 400px;
+    min-width: 100px;
+    height: auto; 
+    margin-bottom: 20px; 
+  }
 .img{
  display: flex;
 }
