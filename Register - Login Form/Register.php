@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-if (isset($_SESSION['name'])) {
+if (isset($_SESSION['name']) && ($_SESSION['surname']) && 
+    ($_SESSION['email']) && ($_SESSION['username']) && ($_SESSION['password'])) {
     header('Location: products.php');
     exit();
 }

@@ -3,24 +3,10 @@ session_start();
 echo '<script>
 alert("Resgister or Log in to see the products")
 </script>';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // Check login credentials (replace this with your actual login logic)
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  // Assuming login is successful
-  if ($username === 'username' && $password === 'password') {
-      // Set session variables (you should have your actual authentication logic here)
-      $_SESSION['username'] = $username;
-      $_SESSION['password'] = $password;
-      // Redirect to the products page
-      header('Location: products.php');
-      exit();
-  } else {
-      // Display an error message or handle unsuccessful login
-      echo 'Invalid username or password';
+  if(isset($_SESSION['name']) && ($_SESSION['password'])){
+    header('Location: products.php');
   }
-}
+
 
 ?>
 
