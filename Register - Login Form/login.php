@@ -1,11 +1,39 @@
 <?php
-session_start();
+include 'Database Connection/databaseConnection.php';
+  if(isset($_POST['submit'])){
+    $username =$_POST['username'];
+    $password = $_POST['password'];
+
+
+  
+}
+
+
 echo '<script>
 alert("Resgister or Log in to see the products")
 </script>';
-  if(isset($_SESSION['name']) && ($_SESSION['password'])){
-    header('Location: products.php');
-  }
+  /*if(isset($_POST['loginbtn'])){
+      if(empty($_POST['username']) || empty($_POST['password'])){
+        echo "Please fill the required fields!";
+      }else{
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        include_once '..\Users\users.php';
+
+
+        foreach($users as $user){
+          if($user['username'] == $username && $user['password'] == $password){
+            session_start();
+
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            header("location: products.php");
+            exit();
+          }
+        }
+      }
+  }*/
 
 
 ?>
@@ -18,12 +46,6 @@ alert("Resgister or Log in to see the products")
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClearVue</title>
   <link rel="stylesheet" href="LogIn forma.css">
-  <script>
-        // JavaScript function to redirect to the products page
-        function redirectToProducts() {
-            window.location.href = 'products.php';
-        }
-    </script>
 </head>
 <body>
   <header class="header">
@@ -54,7 +76,7 @@ alert("Resgister or Log in to see the products")
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
   
-      <input type="submit" value="Log In" onclick="redirecttoProducts()">
+      <input type="submit" name="submit" value="Log In">
     </form>
     <br>
     <p>Don't have an account? <a href="Register.php">Register here</a></p>
@@ -74,11 +96,6 @@ alert("Resgister or Log in to see the products")
         alert('Password must be at least 6 charcters long');
         return false;
       }
-    }
-
-   
-    function redirectToProducts() {
-        window.location.href = 'products.php';
     }
 
   </script>

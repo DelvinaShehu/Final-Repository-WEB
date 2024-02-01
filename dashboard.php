@@ -41,7 +41,7 @@
   <br>
   <hr>
    
-  <table class="content-table">
+  <table class="content-table" border="1">
       <thead>
         <tr>
           <th>ID</th>

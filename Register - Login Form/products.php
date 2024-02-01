@@ -1,23 +1,13 @@
 <?php
 session_start();
-
-function checkLoggedIn() {
-    
-    $isLoggedIn = isset($_SESSION['username']) && isset($_SESSION['password']);
-
-    if (!$isLoggedIn) {
-        
-        $_SESSION['products.php'] = 'products.php';
-
-        
-        header('Location: login.php');
-        exit();
-    
-    }
-}
+  if(!isset($_SESSION['username']) && !isset($_SESSION['password'])){
+    header("location : login.php");
+    exit();
+  }
 
 
-checkLoggedIn();
+
+
 ?>
 
 

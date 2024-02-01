@@ -1,10 +1,15 @@
 <?php
+
 $userId = $_GET['id'];
-include_once '../Users/userRepository.php';
+include_once '../repository/userRepository.php';
+
+
 
 $userRepository = new UserRepository();
 
 $userRepository->deleteUser($userId);
 
 header("location:dashboard.php");
+
+
 ?>

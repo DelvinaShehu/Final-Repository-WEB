@@ -1,11 +1,18 @@
+
 <?php
-$userId =$_GET['id'];
-include_once '../Users/userRepository.php';
+$userId = $_GET['id'];
+include_once '../repository/userRepository.php';
+
+
 
 $userRepository = new UserRepository();
 
-$user = $userRepository->getUserById($userId);
+$user  = $userRepository->getUserById($userId);
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +20,9 @@ $user = $userRepository->getUserById($userId);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
     <title>Document</title>
+
 </head>
 <body>
     <h3>Edit User</h3>
@@ -30,16 +39,19 @@ $user = $userRepository->getUserById($userId);
 </body>
 </html>
 
-<?php
-    if(isset($_POST['editBtn'])){
-        $id = $user['Id'];
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $email = $_POST['email'];
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+<?php 
 
-        $userRepository->updateUser($id,$name,$surname,$email,$username, $password);
-        header("location:Register - Login Form/dashboard.php");
-    }
+if(isset($_POST['editBtn'])){
+    $id = $user['Id'];
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $userRepository->updateUser($id,$name,$surname,$email,$username,$password);
+    header("location:dashboard.php");
+}
+
+
 ?>

@@ -41,7 +41,7 @@
   <br>
   <hr>
    
-  <table border="1" class="content-table">
+  <table class="content-table" border="1">
       <thead>
         <tr>
           <th>ID</th>
@@ -55,30 +55,34 @@
         </tr>
       </thead>
 
-      <?php
-      include_once 'C:\xampp\htdocs\WebProject\web projekti final\Final-Repository-WEB\Users\userRepository.php';
+      <?php 
+             include_once '../repository/userRepository.php';
+             include_once '../Database Connection/databaseConnection.php';
 
-      $userRepository = new UserRepository();
+             $userRepository = new UserRepository();
 
-      $users = $userRepository->getAllUsers();
+             $users = $userRepository->getAllUsers();
 
-      foreach($useers as $user){
-        echo "
-        <tr>
-          <td>$user[Id]</td>
-          <td>$user[Name]</td>
-          <td>$user[Surname]</td>
-          <td>$user[Email]</td>
-          <td>$user[Username]</td>
-          <td>$user[Password]</td>
-          <td><a href='edit.php?id=$user[Id]'>Edit</a> </td>
-          <td><a href='delete.php?id=$user[Id]'>Delete</a></td>
+             foreach($users as $user){
+                echo 
+                "
+                <tr>
+                     <td>$user[Id]</td>
+                     <td>$user[Name]</td>
+                     <td>$user[Surname] </td>
+                     <td>$user[Email] </td>
+                     <td>$user[Username] </td>
+                     <td>$user[Password] </td>
+                     <td><a href='edit.php?id=$user[Id]'>Edit</a> </td>
+                     <td><a href='delete.php? id=$user[Id]'>Delete</a></td>
+                     
+                </tr>
+                ";
+             }
 
-        </tr>
-          ";
-      }
-
-      ?>
+             
+             
+             ?>
     </table>
 </body>
 </html>

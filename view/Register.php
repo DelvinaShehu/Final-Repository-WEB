@@ -106,7 +106,7 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
   </script>
 
   <?php
-  include_once '../Users/registerController.php';
+  include_once '../controller/registerController.php';
   ?>
 </body>
 </html>
