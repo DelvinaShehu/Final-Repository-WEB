@@ -37,7 +37,7 @@
   <br>
   
   <div class="RegisterPage">
-    <form action="#" method="post" onsubmit="validateForm">
+    <form method="post" onsubmit="validateForm">
 
       <label for="name">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -45,7 +45,7 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
   
-      <input type="submit" value="Log In">
+      <input type="submit" value="Log In" name="login">
     </form>
     <br>
     <p>Don't have an account? <a href="RegisterForm.html">Register here</a></p>

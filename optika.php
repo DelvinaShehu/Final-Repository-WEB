@@ -1,4 +1,3 @@
- 
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,7 @@
     <div class="dropdown">
         <button class="dropbtn">Dashboard</button>
         <div class="dropdown-content">
-          <a href="dashboard.html">Users</a>
+          <a href="dashboard.html" class="<?php echo $hide?>">Users</a>
           <a href="productsTable.html">Products</a>
           <a href="ContactTable.html">Contact</a>
         </div>
@@ -29,7 +28,8 @@
       <a class="home" href="AboutUs.html">About Us</a>
       <a class="home" href="products.html">Products</a>
       <a class="home" href="contact.html">Contact</a>
-      <a class="home" href="LogIn forma.html">Log In</a>
+      <a class="home" href="LogIn forma.html"<?php echo $hide?>>Log In</a>
+      <a class="home" href="logout.php">Log Out</a>
 
     </nav>
 
