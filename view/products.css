@@ -11,7 +11,9 @@
     background-size: cover;
     background-position: center;
   }
-
+  .hide{
+    display:none;
+}
   .header{
     position: fixed;
     top: 0;

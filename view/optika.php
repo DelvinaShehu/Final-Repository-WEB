@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 
+=======
+<?php
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['username']))
+    header("location:LogIn forma.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
+>>>>>>> 06349c239132f945cfd3daac74529fd7a91dfd9d
 <!------------------------------------------------>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +31,7 @@
 
     <nav class="navBar">
 
-    <div class="class=<?php echo $hide?>">
+    <div class="<?php echo $hide?>">
       <div class="dropdown">
         <button class="dropbtn">Dashboard</button>
         <div class="dropdown-content">

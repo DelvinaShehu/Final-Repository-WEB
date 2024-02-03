@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['username']))
+    header("location:LogIn forma.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +26,8 @@
     
     <nav class="navBar">
 
-    <div class="dropdown">
+    <div class="<?php echo $hide?>">
+      <div class="dropdown">
         <button class="dropbtn">Dashboard</button>
         <div class="dropdown-content">
           <a href="dashboard.php">Users</a>
@@ -22,6 +35,7 @@
           <a href="ContactTable.php">Contact</a>
         </div>
       </div>
+   </div> 
       
         <a class="home" href="optika.php">Home</a>
         <a class="home" href="AboutUs.php">About Us</a>
@@ -165,3 +179,7 @@
 
 </body>
 </html>
+
+<?php
+  }
+?>
