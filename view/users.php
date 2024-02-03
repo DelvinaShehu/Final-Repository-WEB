@@ -18,11 +18,11 @@
   ];
 
   $user3 = [
-    "name"=>"Alma",
-    "surname"=>"Novoberdaliu",
-    "email"=>"an@ubt-uni.net",
-    "username"=>"almanovoberdaliu",
-    "password" => "alma123",
+    "name"=>"Filan",
+    "surname"=>"Fisteku",
+    "email"=>"ff@ubt-uni.net",
+    "username"=>"filanfisteku",
+    "password" => "filan",
     "role"=>"user"
   ];
 
