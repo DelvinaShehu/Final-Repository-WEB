@@ -6,7 +6,51 @@
   <title>ClearVue</title>
   <link rel="stylesheet" href="dashboard.css">
 </head>
+<style>
+.btn-primary {
+      margin-left: 550px;
+    }
 
+    .content-table {
+      width: 100%;
+      margin-top: 20px;
+      overflow-x: auto; 
+      border-collapse: collapse;
+    }
+
+    .content-table th,
+    .content-table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .user-table {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      .btn-primary {
+        margin-left: 0;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .content-table th,
+      .content-table td {
+        font-size: 14px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 80px; 
+      }
+
+      .user-table {
+        width: 90%;
+      }
+    }
+ </style>
 <body>
 
   <header class="header">
@@ -39,7 +83,10 @@
   <h2><em>Users:</em></h2>
   <br>
   <br>
-  <hr>
+  <br>
+  <br>
+  <br>
+  <div class="user-table">
   <a href="addUser.php" class="btn-primary">Add User</a>
   
   <table class="content-table" border="1">
@@ -55,7 +102,7 @@
           <th>Delete</th>
         </tr>
       </thead>
-
+</div>
       <?php 
              include_once '../repository/userRepository.php';
              include_once '../Database Connection/databaseConnection.php';

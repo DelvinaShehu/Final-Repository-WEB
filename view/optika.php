@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 <?php
   session_start();
   $hide="";
@@ -11,8 +8,8 @@
       $hide = "";
     else
       $hide = "hide";
+  
 ?>
->>>>>>> 06349c239132f945cfd3daac74529fd7a91dfd9d
 <!------------------------------------------------>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +20,33 @@
   <title>ClearVue</title>
 
 </head>
+<style>
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+ }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.image-container{
+  flex: 0 0 calc(33.33% - 20px);
+}
+@media (max-width: 768px) {
+      .image-container {
+        flex: 0 0 calc(60% - 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-container {
+        flex: 0 0 calc(100% - 20px);
+      }
+    }
+  </style>
 <body>
 <!------------------------------------------------>
   <header class="header">
@@ -195,3 +219,7 @@
 </body>
 
 </html>
+
+<?php
+  }
+  ?>

@@ -92,6 +92,11 @@
 .img{
  display: flex;
 }
+@media (max-width: 768px) {
+  .image-container {
+    flex: 0 0 100%;
+  }
+}
 
 .img img{
   height: 500px;

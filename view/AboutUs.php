@@ -17,6 +17,14 @@
   <title>ClearVue</title>
   <link rel="stylesheet" href="AboutUs.css">
 </head>
+<style>
+.container2{
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-left: 120px;
+}
+  </style>
 <body>
   <header class="header">
 

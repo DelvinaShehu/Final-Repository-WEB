@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
   session_start();
   $hide="";
@@ -10,9 +9,6 @@
     else
       $hide = "hide";
 ?>
-=======
-
->>>>>>> c4edc4e7c29bef3245c6107329d147b5d3eea242
 <!DOCTYPE html>
 <html lang="en">
 <head>

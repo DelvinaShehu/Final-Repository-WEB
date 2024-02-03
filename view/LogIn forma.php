@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
   if(isset($_POST['login'])){
     if(empty($_POST['username']) || empty($_POST['password'])){
       echo '<script>alert("Please fill out all the required fields!");</script>';
@@ -31,59 +30,12 @@
               header("location: LogIn forma.php");
               
             }
-=======
-include '../Database Connection/databaseConnection.php';
-echo '<script>alert("Log in or Register to see the products") </script>';
-  if(isset($_POST['submit'])){
-    $username =$_POST['username'];
-    $password = $_POST['password'];
-
-    header("Location:../view/products.php");
-  
-}
-
-if(isset($_POST['loginbtn'])){
-  if(empty($_POST['username']) || empty($_POST['password'])){
-    echo "Please fill the required fields!";
-  }else{
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-
-      include_once 'users.php';
-      $i=0;
-      
-      foreach($users as $user){
-        if($user['username'] == $username && $user['password'] == $password){
-          session_start();
-    
-          $_SESSION['username'] = $username;
-          $_SESSION['password'] = $password;
-          $_SESSION['role'] = $user['role'];
-          $_SESSION['loginTime'] = date("H:i:s");
-          header("location:products.php");
-          exit();
-        }else{
-          $i++;
-          if($i == sizeof($users)) {
-            echo "Incorrect Username or Password!";
-            exit();
->>>>>>> c4edc4e7c29bef3245c6107329d147b5d3eea242
           }
         }
       }
   }
-<<<<<<< HEAD
 ?>
-?>
-=======
-}
 
-      if ($_SESSION['role'] === 'admin'): ?>
-          <a href="dashboard.php">Dashboard</a>
-      <?php endif; 
-      ?>
-
->>>>>>> c4edc4e7c29bef3245c6107329d147b5d3eea242
 <!DOCTYPE html>
 <html lang="en">
 <head>
