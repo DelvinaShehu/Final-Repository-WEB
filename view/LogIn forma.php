@@ -1,14 +1,14 @@
 <?php
   if(isset($_POST['login'])){
     if(empty($_POST['username']) || empty($_POST['password'])){
-      echo "<script> Please fill the required fields! </script>";
+      echo '<script>alert("Please fill out all the required fields!");</script>';
     }else{
         
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        include_once '../models/user.php';
         include_once 'users.php';
+        include_once 'databaseConnection.php';
         $i=0;
         
         foreach($users as $user){
@@ -19,18 +19,22 @@
             $_SESSION['password'] = $password;
             $_SESSION['role'] = $user['role'];
             $_SESSION['loginTime'] = date("H:i:s");
-            header("location:home.php");
+            header("location:optika.php");
             exit();
           }else{
             $i++;
             if($i == sizeof($users)) {
-              echo "<script> Incorrect Username or Password! </script>";
+              
+              echo '<script>alert("Incorrect Username or Password!");</script>';
               exit();
+              header("location: LogIn forma.php");
+              
             }
           }
         }
     }
   }
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
