@@ -24,6 +24,44 @@ $user  = $userRepository->getUserById($userId);
     <title>Document</title>
 
 </head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: beige;
+  text-align: center;
+  margin: 20px;
+}
+
+h3 {
+  color: #333;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: rgb(144, 7, 7);
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(201, 114, 106);
+}
+    </style>
 <body>
     <h3>Edit User</h3>
     <form action="" method="post">

@@ -8,6 +8,7 @@
       $hide = "";
     else
       $hide = "hide";
+  
 ?>
 <!------------------------------------------------>
 <!DOCTYPE html>
@@ -19,6 +20,33 @@
   <title>ClearVue</title>
 
 </head>
+<style>
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+ }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.image-container{
+  flex: 0 0 calc(33.33% - 20px);
+}
+@media (max-width: 768px) {
+      .image-container {
+        flex: 0 0 calc(60% - 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-container {
+        flex: 0 0 calc(100% - 20px);
+      }
+    }
+  </style>
 <body>
 <!------------------------------------------------>
   <header class="header">
@@ -194,4 +222,4 @@
 
 <?php
   }
-?>
+  ?>

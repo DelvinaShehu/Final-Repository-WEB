@@ -8,6 +8,41 @@
   <title>ClearVue</title>
   <link rel="stylesheet" href="addUser.css">
 </head>
+<style>
+
+
+    .addUser {
+        width: 50%; 
+        margin: 100px auto; 
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        
+    }
+
+    .addtable {
+        width: 100%;
+    }
+
+    td {
+        padding: 10px;
+    }
+    .addbutton{
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        .main-content {
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .input {
+            width: 90%;
+        }
+    }
+    </style>
 
 <body>
 
@@ -40,45 +75,42 @@
 <br>
 <br>
 <br>
-    <div class="main-content">
-        <div class="wrapper">
-            <h2>Add User</h2>
-        </div>
-        <br>
-<br>
-<br>
-<br>
-<br>
-    <form action="" method="POST">
-        <table class = "addtable">
-            <tr>
-                <td>Name</td>
-                <td><input type="text" name="Name" placeholder="Enter the name"></td>
-            </tr>
-            <tr>
-            <td>Surname</td>
-                <td><input type="text" name="Surname" placeholder="Enter the surname"></td>
-            </tr>
-            <tr>
-            <td>Email</td>
-            <td><input type="text" name="Email" placeholder="Enter the email"></td>
-            </tr>
-            <tr>
-            <td>Username</td>
-            <td><input type="text" name="Username" placeholder="Enter the username"></td>
-            <tr>
-            <td>Password</td>
-            <td><input type="password" name="Password" placeholder="Enter the password"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="submit" value="Add User" class="addbutton">
-                </td>
-            </tr>
-        </table>
-
-    </form>
+<div class="wrapper">
+        <h2>Add User</h2>
     </div>
+
+<div class="main-content">
+        <div class="addUser">
+        <form action="#" method="POST">
+            <table class = "addtable">
+                <tr>
+               
+                    <td><input type="text" name="Name" placeholder="Enter the name"></td>
+                </tr>
+                <tr>
+              
+                    <td><input type="text" name="Surname" placeholder="Enter the surname"></td>
+                </tr>
+                <tr>
+               
+                <td><input type="text" name="Email" placeholder="Enter the email"></td>
+                </tr>
+                <tr>
+                
+                <td><input type="text" name="Username" placeholder="Enter the username"></td>
+                <tr>
+               
+                <td><input type="password" name="Password" placeholder="Enter the password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Add User" class="addbutton">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
@@ -90,7 +122,7 @@ include_once '../models/user.php';
 if(isset($_POST['submit'])){
     if(empty($_POST['Name']) || empty($_POST['Surname']) || empty($_POST['Email']) ||
     empty($_POST['Username']) || empty($_POST['Password'])){
-        echo "Fill all fields!";
+        echo "<script>alert('Fill all fields!')</script>";
     }else{
         $name = $_POST['Name'];
         $surname = $_POST['Surname'];

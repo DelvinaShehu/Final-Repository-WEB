@@ -60,15 +60,16 @@
         <p>Feel free to reach out for any inquiries or assistance.</p>
         <br>
         <br>
-
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-          <input type="text"  name="Username"  id = "Username "placeholder="Enter your username" required>
-          <br>
-          <input type="text" name="Password" id = "Password" placeholder="Enter your password" required>
-          <br>
-          <textarea placeholder="Your message..." name= "Message "rows="4" id="Message" required></textarea>
-          <input type="submit" name = "sendBtn" value="Send" id="sendBtn">
-        </form>
+        <div class="ContactPage">
+          <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <input type="text"  name="Username"  id = "Username "placeholder="Enter your username" required>
+            <br>
+            <input type="password" name="Password" id = "Password" placeholder="Enter your password" required>
+            <br>
+            <input type="text" name="Message" id = "Message" placeholder="Enter your message" required>
+            <input type="submit" name = "sendBtn" value="Send" id="sendBtn">
+          </form>
+        
         <br>
         <br>
         <br>
@@ -100,18 +101,19 @@
                 <img src="pinterest.png" alt="Twitter">
               </a>
             </div>
-    
-    
-    
-    </section>
-
-      <section class="right-section">
-        <div class="eyewear-photo">
-          <img src="backu.jpg" alt="Eyewear Brand">
         </div>
-          </div>
-      </section>
+    
+    
+        </section>
 
+          <section class="right-section">
+            <div class="eyewear-photo">
+              <img src="backu.jpg" alt="Eyewear Brand">
+            </div>
+              </div>
+          </section>
+    </div>
+</main>
 <br>
 <br>
 <br>

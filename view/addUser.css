@@ -20,12 +20,6 @@
     font-family: "Poppins",sans-serif;  
   }
   
-  body{
-    min-height: 100vh;
-    background-color: beige;
-    background-size: cover;
-    background-position: center;
-  }
   
   .header{
     position: fixed;
@@ -60,7 +54,7 @@
   .navBar a:hover{
     font-weight: bold;
     cursor: pointer;
-   border-bottom: 3px solid rgb(135, 53, 13);
+   border-bottom: 3px solid rgb(201, 114, 106);
   }
   
   h2 {
@@ -70,17 +64,44 @@
     text-align: center;
     padding: 30px 20px 5px 0;
     color: rgb(144, 7, 7);
+  
+  }
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 50px;
+  }
+  .addUser {
+      width: 400px;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .addtable {
+      width: 100%;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+
+  input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
   }
   
-  hr {
-    border: none; 
-    height: 1.5px; 
-    background-color: rgb(156, 66, 66); 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-  }
-  
+
   .btn-primary{
-    background-color:rgb(156, 66, 66) ;
+    background-color:rgb(140, 62, 62) ;
     padding: 1%;
     color: white;
     margin-left: 50px;
@@ -88,50 +109,11 @@
     font-weight: bold;
   }
   .btn-primary:hover{
-    background-color:rgb(182, 137, 137) ;
+    background-color:rgb(245, 244, 244) ;
   
   }
-  
-  .content-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    max-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    width: 80%;
-  }
-  
-  .content-table thead tr {
-    background-color: rgb(156, 66, 66);
-    color: beige;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .content-table th,
-  .content-table td {
-    padding: 12px 15px;
-  }
-  
-  .content-table tbody tr {
-    border-bottom: 1px solid #ffacac;
-  }
-  
-  .content-table tbody tr:nth-of-type(even) {
-    background-color: #ffacac;
-  }
-  
-  .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid rgb(156, 66, 66);
-  }
-  
-  /* jsdgfsgjdfg */
-  
+
+
   .dropbtn {
     background-color: rgba(165, 42, 42, 0.611);
     color: beige; 
@@ -173,21 +155,10 @@
   .dropdown:hover .dropbtn {background-color: beige;
                             color: rgba(165, 42, 42, 0.611);}
 
-.addtable{
-    width: 30%;
-    align-items: center;
-    padding: 1%;
-        color: rgb(11, 3, 3);
-        margin-left: 300px;
-        text-decoration: none;
-        font-weight: bold;
-    
-}
 .addbutton{
     background-color:rgb(197, 61, 61) ;
         padding: 1%;
         color: white;
-        margin-left: 300px;
         text-decoration: none;
         font-weight: bold;
         

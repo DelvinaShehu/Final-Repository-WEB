@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <?php
 if (isset($_POST['registerBtn'])) {
     if (empty($_POST['name']) || empty($_POST['surname']) || empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password'])) {
@@ -62,6 +64,7 @@ if (isset($_POST['registerBtn'])) {
     }
 }
 ?>
+>>>>>>> d6167f6c9afb655dc70894fc57c284f4334650da
 <!DOCTYPE html>
 <html lang="en">
 <head>
