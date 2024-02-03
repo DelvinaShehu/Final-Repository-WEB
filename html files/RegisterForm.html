@@ -1,22 +1,3 @@
-<?php
-session_start();
-
-include_once '../Register - Login Form/registerController.php';
-
-if (isset($_SESSION['name']) && ($_SESSION['surname']) && 
-    ($_SESSION['email']) && ($_SESSION['username']) && ($_SESSION['password'])) {
-    header('Location: products.php');
-    exit();
-}
-
-<<<<<<< HEAD
-
-=======
-// include_once '../Register - Login Form/registerController.php';
->>>>>>> 7902d45dca8c07f5822b8e98e5252f996ed6d5cf
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,46 +7,57 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
   <link rel="stylesheet" href="RegisterForm.css">
 </head>
 <body>
-  <!-- <header class="header">
+  <header class="header">
 
     <a href="logoja.png" class="logo">ClearVue</a>
 
     <nav class="navBar">
 
+      <div class="dropdown">
+        <button class="dropbtn">Dashboard</button>
+        <div class="dropdown-content">
+          <a href="dashboard.html">Users</a>
+          <a href="productsTable.html">Products</a>
+          <a href="ContactTable.html">Contact</a>
+        </div>
+      </div>
+
       <a class="home" href="optika.html">Home</a>
-      <a class="home" href="aboutUs.php">About Us</a>
-      <a class="home" href="products.php">Products</a>
-      <a class="home" href="">Contact</a>
-      <a class="home" href="login.php">Log In</a>
+      <a class="home" href="AboutUs.html">About Us</a>
+      <a class="home" href="products.html">Products</a>
+      <a class="home" href="contact.html">Contact</a>
+      <a class="home" href="LogIn forma.html">Log In</a>
 
     </nav>
 
   </header>
   
   <br>
-  <br> -->
+  <br>
   
 
   <div class="RegisterPage">
-  <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+    <form action="#" method="post" onsubmit="validateForm">
 
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
       <label for="surname">Surname:</label>
       <input type="text" id="surname" name="surname" required>
-
+  
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
 
-
-      <label for="Username">Username:</label>
-      <input type="text" id="Username" name="username" required>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
   
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
   
-      <input type="submit" name = "registerBtn" value="Register">
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+  
+      <input type="submit" value="Register">
     </form>
   </div>
 
@@ -74,10 +66,8 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
       let name = document.getElementById('name').value;
       let surname = document.getElementById('surname').value;
       let email = document.getElementById('email').value;
-      let username = document.getElementById('username').value;
       let password = document.getElementById('password').value;
-      
-      
+      let confirmPassword = document.getElementById('confirmPassword').value;
 
       let nameRegex = /^[a-zA-Z\s]+$/;
       if(!nameRegex.test(name)){
@@ -91,28 +81,29 @@ if (isset($_SESSION['name']) && ($_SESSION['surname']) &&
         return false;
       }
 
-
+      let usernameRegex = /^[a-zA-Z\s]+$/;
+      if(!usernameRegex.test(username)){
+        alert('Please enter a valid username.');
+        return false;
+      }
+      
       let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if(!emailRegex.test(email)){
         alert('Please enter a valid email address');
         return false;
       }
-      let usernameRegex = /^[a-zA-Z\s]+$/;
-      if(!nameRegex.test(username)){
-        alert('Please enter a valid surname.');
-        return false;
-      }
+
       if(password.length < 6){
         alert('Password must be at least 6 charcters long');
         return false;
       }
 
+      if(password !== confirmPassword){
+        alert('Passwords do not match');
+        return false;
+      }
     }
-  
   </script>
-
-  <?php
-  include_once '../Users/registerController.php';
-  ?>
+  
 </body>
 </html>

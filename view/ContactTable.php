@@ -41,7 +41,7 @@
   <br>
   <hr>
    
-  <table class="content-table">
+  <table class="content-table" border="1">
       <thead>
         <tr>
           <th>ID</th>
@@ -52,6 +52,32 @@
           <th>Delete</th>
         </tr>
       </thead>
+      <?php 
+             include_once '../REPOSITORYYY/contactRepository.php';
+
+             $contactRepository = new ContactRepository();
+
+             $users = $contactRepository->getAllContacts();
+
+             foreach($users as $user){
+                echo 
+                "
+                <tr>
+                     <td>$user[Id]</td>
+                     <td>$user[Username] </td>
+                     <td>$user[Password] </td>
+                     <td>$user[Message] </td>
+                     <td><a href='editContact.php?id=$user[Id]'>Edit</a> </td>
+                     <td><a href='deleteContact.php? id=$user[Id]'>Delete</a></td>
+                     
+                </tr>
+                ";
+             }
+
+             
+             
+             ?>
     </table>
+   
 </body>
 </html>

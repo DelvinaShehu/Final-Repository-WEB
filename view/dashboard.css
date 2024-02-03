@@ -79,6 +79,20 @@ hr {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
+.btn-primary{
+  background-color:rgb(156, 66, 66) ;
+  padding: 1%;
+  color: white;
+  margin-left: 430px;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+.btn-primary:hover{
+  background-color:rgb(182, 137, 137) ;
+
+}
+
 
 .content-table {
   border-collapse: collapse;

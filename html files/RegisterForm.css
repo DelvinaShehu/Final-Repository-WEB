@@ -10,21 +10,6 @@ body{
   background-color: beige;
   background-size: cover;
   background-position: center;
-  margin: 0; 
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins",sans-serif;  
-}
-
-body{
-  min-height: 100vh;
-  background-color: beige;
-  background-size: cover;
-  background-position: center;
 }
 
 .header{
@@ -61,64 +46,53 @@ body{
   font-weight: bold;
   cursor: pointer;
  border-bottom: 3px solid rgb(135, 53, 13);
+} 
+.RegisterPage {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  margin-top: 60px;
-  font-size:40px;
-  line-height: 20px;
+#RegisterImg {
   text-align: center;
-  padding: 30px 20px 5px 0;
-  color: rgb(144, 7, 7);
 }
 
-hr {
-  border: none; 
-  height: 1.5px; 
-  background-color: rgb(156, 66, 66); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+#RegisterImg img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-
-.content-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  max-width: 400px;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  width: 80%;
+form {
+  display: grid;
+  gap: 15px;
 }
 
-.content-table thead tr {
-  background-color: rgb(156, 66, 66);
-  color: beige;
-  text-align: left;
+label {
+  display: block;
   font-weight: bold;
 }
 
-.content-table th,
-.content-table td {
-  padding: 12px 15px;
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #af4c4c;
+  border-radius: 4px;
 }
 
-.content-table tbody tr {
-  border-bottom: 1px solid #ffacac;
+input[type="submit"] {
+  background-color: #af4c4c;
+  color: white;
+  cursor: pointer;
 }
 
-.content-table tbody tr:nth-of-type(even) {
-  background-color: #ffacac;
+input[type="submit"]:hover {
+  background-color: #881c1c;
 }
-
-.content-table tbody tr:last-of-type {
-  border-bottom: 2px solid rgb(156, 66, 66);
-}
-
-/* jsdgfsgjdfg */
 
 .dropbtn {
   background-color: rgba(165, 42, 42, 0.611);

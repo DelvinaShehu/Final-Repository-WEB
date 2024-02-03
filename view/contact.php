@@ -61,13 +61,13 @@
         <br>
         <br>
 
-        <form action="#" method="post">
-          <input type="text"  id = "username "placeholder="Enter your username" required>
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+          <input type="text"  name="Username"  id = "Username "placeholder="Enter your username" required>
           <br>
-          <input type="text" id = "password" placeholder="Enter your password" required>
+          <input type="text" name="Password" id = "Password" placeholder="Enter your password" required>
           <br>
-          <textarea placeholder="Your message..." rows="4" required></textarea>
-          <button type="submit">Send</button>
+          <textarea placeholder="Your message..." name= "Message "rows="4" id="Message" required></textarea>
+          <input type="submit" name = "sendBtn" value="Send" id="sendBtn">
         </form>
         <br>
         <br>
@@ -173,6 +173,8 @@
     }
 
   </script>
+ <?php include_once '../Controller2/registerController.php';?>
+
 </body>
 </html>
 
