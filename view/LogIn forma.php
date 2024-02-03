@@ -26,8 +26,10 @@
             if($i == sizeof($users)) {
               
               echo '<script>alert("Incorrect Username or Password!");</script>';
-              exit();
               header("location: LogIn forma.php");
+
+              exit();
+              
               
             }
           }
@@ -35,7 +37,7 @@
       }
   }
 ?>
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
