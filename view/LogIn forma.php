@@ -1,37 +1,50 @@
 <?php
-  if(isset($_POST['login'])){
-    if(empty($_POST['username']) || empty($_POST['password'])){
-      echo "<script> Please fill the required fields! </script>";
-    }else{
-        
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+include '../Database Connection/databaseConnection.php';
+echo '<script>alert("Log in or Register to see the products") </script>';
+  if(isset($_POST['submit'])){
+    $username =$_POST['username'];
+    $password = $_POST['password'];
 
-        include_once '../models/user.php';
-        include_once 'users.php';
-        $i=0;
-        
-        foreach($users as $user){
-          if($user['username'] == $username && $user['password'] == $password){
-            session_start();
+    header("Location:../view/products.php");
+  
+}
+
+if(isset($_POST['loginbtn'])){
+  if(empty($_POST['username']) || empty($_POST['password'])){
+    echo "Please fill the required fields!";
+  }else{
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+
+      include_once 'users.php';
+      $i=0;
       
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['role'] = $user['role'];
-            $_SESSION['loginTime'] = date("H:i:s");
-            header("location:home.php");
+      foreach($users as $user){
+        if($user['username'] == $username && $user['password'] == $password){
+          session_start();
+    
+          $_SESSION['username'] = $username;
+          $_SESSION['password'] = $password;
+          $_SESSION['role'] = $user['role'];
+          $_SESSION['loginTime'] = date("H:i:s");
+          header("location:products.php");
+          exit();
+        }else{
+          $i++;
+          if($i == sizeof($users)) {
+            echo "Incorrect Username or Password!";
             exit();
-          }else{
-            $i++;
-            if($i == sizeof($users)) {
-              echo "<script> Incorrect Username or Password! </script>";
-              exit();
-            }
           }
         }
-    }
+      }
   }
-?>
+}
+
+      if ($_SESSION['role'] === 'admin'): ?>
+          <a href="dashboard.php">Dashboard</a>
+      <?php endif; 
+      ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

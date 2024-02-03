@@ -40,7 +40,8 @@
   <br>
   <br>
   <hr>
-   
+  <a href="addUser.php" class="btn-primary">Add User</a>
+  
   <table class="content-table" border="1">
       <thead>
         <tr>
