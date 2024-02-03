@@ -177,6 +177,12 @@
 <br>
 <br>
 <br>
+<button class="<?php echo $hide?>" style="margin-left: 720px">
+    <a href="form.php">+</a>
+</button>
+<br>
+<br>
+<br>
 <br>
 
   <div class = "products">

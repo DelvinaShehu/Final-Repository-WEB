@@ -1,3 +1,70 @@
+<<<<<<< HEAD
+=======
+<?php
+if (isset($_POST['registerBtn'])) {
+    if (empty($_POST['name']) || empty($_POST['surname']) || empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password'])) {
+        echo '<script>alert("Please fill out all the required fields!");</script>';
+    } else {
+
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        include_once 'users.php';
+        include_once 'databaseConnection.php';
+
+        $i = 0;
+        $userExists = false;
+
+        foreach ($users as $user) {
+            if ($user['name'] == $name && $user['surname'] == $surname &&
+                $user['email'] == $email && $user['username'] == $username
+                && $user['password'] == $password
+            ) {
+                $userExists = true;
+                break;
+            }
+            $i++;
+        }
+
+        if (!$userExists) {
+
+            $newUser = [
+                'name' => $name,
+                'surname' => $surname,
+                'email' => $email,
+                'username' => $username,
+                'password' => $password,
+                'role' => 'user'
+            ];
+
+            $users[] = $newUser;
+
+            session_start();
+
+            $_SESSION['name'] = $name;
+            $_SESSION['surname'] = $surname;
+            $_SESSION['email'] = $email;
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['role'] = 'user';
+            $_SESSION['loginTime'] = date("H:i:s");
+
+            echo '<script>alert("User has been registered successfully!");</script>';
+
+            header("location: optika.php");
+
+            exit();
+        } else {
+            echo '<script>alert("User already exists");</script>';
+            exit();
+        }
+    }
+}
+?>
+>>>>>>> d6167f6c9afb655dc70894fc57c284f4334650da
 <!DOCTYPE html>
 <html lang="en">
 <head>

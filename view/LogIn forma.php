@@ -35,7 +35,11 @@
       }
   }
 ?>
+<<<<<<< HEAD
 
+=======
+?>
+>>>>>>> d6167f6c9afb655dc70894fc57c284f4334650da
 <!DOCTYPE html>
 <html lang="en">
 <head>

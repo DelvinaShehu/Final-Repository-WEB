@@ -52,6 +52,28 @@
           <th>Edit</th>
           <th>Delete</th>
         </tr>
+        <?php 
+        include_once '../productsCrUd/productRepository.php';
+
+        $productRepository = new productRepository();
+
+        $products = $productRepository->getAllProducts();
+
+        foreach($products as $product){
+          echo 
+          "
+          <tr>
+                <td>$product[Id]</td>
+                <td>$product[Brand] </td>
+                <td>$product[Price] </td>
+                <td>$product[Model] </td>
+                <td>$product[Stock] </td>
+                <td><a href='editProduct.php?id=$product[Id]'>Edit</a> </td>
+                <td><a href='deleteProduct.php? id=$product[Id]'>Delete</a></td> //
+          </tr>
+          ";
+        } //qato edit edhe delete masi ti bojsh files ndreqi prap   
+      ?>
       </thead>
     </table>
 </body>
