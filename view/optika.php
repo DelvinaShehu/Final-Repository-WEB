@@ -1,14 +1,4 @@
-<?php
-  session_start();
-  $hide="";
-  if(!isset($_SESSION['username']))
-    header("location:login.php");
-  else{
-    if($_SESSION['role'] == "admin")
-      $hide = "";
-    else
-      $hide = "hide";
-?>
+
 <!------------------------------------------------>
 <!DOCTYPE html>
 <html lang="en">
@@ -191,7 +181,3 @@
 </body>
 
 </html>
-
-<?php
-  }
-?>
