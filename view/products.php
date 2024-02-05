@@ -9,6 +9,7 @@
     else
       $hide = "hide";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="products.css">
     <title>ClearVue</title>
 </head>
+
 
 <body>
 <header class="header">
@@ -62,7 +64,7 @@
         <p><b>Find your size , Find your fit</b></p>
     </div>
 
-
+<!-- 
 <div class="image-row">
     <div class="image-container">
       <img src="syzekafe.webp" alt="Default Image 1">
@@ -171,17 +173,33 @@
         <p><b>Flame sunglasses</b></p>
         <p><em>280.60 €</em></p>
       </div>
-    
     </div>
-</div>
+</div> -->
+<div class="image-row">
+        <?php
+        $sql = "SELECT * FROM products";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="image-container">';
+                echo "<img src='{$row['photo1']}' alt='Default Image'>";
+                echo "<img class='hover-image' src='{$row['photo2']}' alt='Hover Image'>";
+                echo "<p><b>{$row['brand']}</b></p>";
+                echo "<p><em>{$row['price']} €</em></p>";
+                echo '</div>';
+            }
+        } else {
+            echo "No products available.";
+        }
+        ?>
+    </div>
 <br>
 <br>
 <br>
-<button class="<?php echo $hide?>" style="margin-left: 720px">
+<button class="<?php echo $hide?>" style="margin-left: 740px">
     <a href="form.php">+</a>
 </button>
-<br>
-<br>
 <br>
 <br>
 
@@ -264,6 +282,7 @@
     
 </body>
 </html>
+
 <?php
   }
 ?>
